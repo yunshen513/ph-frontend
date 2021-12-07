@@ -1,0 +1,40 @@
+.Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Input {
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.ErrorMessage {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.SubmitButton {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #6d76f7;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.CancelButton {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: rgb(116, 6, 6);
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
