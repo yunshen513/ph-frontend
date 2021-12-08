@@ -1,0 +1,34 @@
+.dropdown {
+    width: fit-content;
+    position:absolute;
+    list-style: none;
+    text-align: start;
+    top:80px;
+}
+
+.dropdown li{
+    background: rgb(0, 212, 212);
+    cursor: pointer;
+}
+
+.sub-dropdown {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    position: relative;
+    list-style: none;
+}
+
+
+.dropdownItem {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px; 
+}
+
+.dropdownItem:hover {
+    background: rgb(0, 175, 175);
+}

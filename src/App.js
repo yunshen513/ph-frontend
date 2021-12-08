@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar submenu={MenuItems} openModal={() => setModalIsOpen(true)}/>
+      <Navbar navItems={MenuItems} openModal={() => setModalIsOpen(true)}/>
       <Modal isOpen={modalIsOpen}>
         <h1>Login</h1>
         <LoginForm closeModal={() => setModalIsOpen(false)}/>
