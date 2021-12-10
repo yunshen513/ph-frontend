@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
 import { MenuItems } from './components/Navbar/MenuItems';
-import LoginForm from './components/LoginForm';
+import { LoginForm } from './components/LoginForm';
 import './App.css';
 
-function App() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+export const App: React.FC = () => {
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   return (
     <div className="App">
@@ -19,4 +19,3 @@ function App() {
   );
 }
 
-export default App;

@@ -1,12 +1,18 @@
 import React,  { useState } from 'react';
 import "./Dropdown.css"
+import { Item } from "./Navbar/Navbar"
 
-function Dropdown(props) {
-  const [subDropdown, setSubDropdown] = useState();
+interface Props {
+  cName: string;
+  dropdownItems: Item[];
+}
+
+export const Dropdown: React.FC<Props> = ({cName, dropdownItems}) => {
+  const [subDropdown, setSubDropdown] = useState<string>("");
 
   return(
-    <ul className={props.cName}>
-      {props.dropdownItems.map((item, index) => {
+    <ul className={cName}>
+      {dropdownItems.map((item: Item, index: number) => {
         return (
           <li key={index} >
             <a className="dropdownItem" href= {item.link} onClick={() => setSubDropdown(item.title)}>
@@ -20,5 +26,3 @@ function Dropdown(props) {
     </ul>
   )
 }
-
-export default Dropdown;

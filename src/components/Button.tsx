@@ -11,7 +11,15 @@ const SIZES = [
     'btn--large'
 ]
 
-export const Button = ({
+interface Props {
+    chidren?: any;
+    type?: any;
+    onClick: () => void;
+    buttonStyle?: any;
+    buttonSize?: any;
+}
+
+export const Button: React.FC<Props> = ({
     children,
     type,
     onClick,

@@ -1,18 +1,19 @@
 .dropdown {
     width: fit-content;
-    position:absolute;
+    position: absolute;
     list-style: none;
     text-align: start;
-    top:80px;
+    top: 60px;
 }
 
 .dropdown li{
+    height: 40px;
     background: rgb(0, 212, 212);
-    cursor: pointer;
+    cursor:pointer;
 }
 
 .sub-dropdown {
-    top: 0;
+    bottom: 100%;
     left: 100%;
     margin-top: -1px;
     position: relative;

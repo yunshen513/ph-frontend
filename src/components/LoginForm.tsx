@@ -3,18 +3,27 @@ import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import "./LoginForm.css"
 
-function validateUser({username, password}) {
-    let error = "incorrect username or passord";
-    if (username === "yunshen513" && password === "123456"){
+interface User {
+  username: string;
+  password: string;
+} 
+
+const validateUser = (user: User) => {
+    let error: string | null = "incorrect username or passord";
+    if (user.username === "yunshen513" && user.password === "123456"){
         error = null;
     }
     console.log(error);
     return error;
 }
 
-function LoginForm(props) {
+interface Props {
+  closeModal: () => void;
+}
+
+export const LoginForm: React.FC<Props> = ({closeModal}) => {
     return (
-        <Formik className="Formik"
+        <Formik
           initialValues={{
             username: '',
             password: '',
@@ -46,11 +55,9 @@ function LoginForm(props) {
               {errors.password && touched.password ? (<div className="ErrorMessage">{errors.password}</div>) : null}
               
               <button className="SubmitButton" type="submit">Submit</button>
-              <button className="CancelButton" onClick={props.closeModal}>Cancel</button>
+              <button className="CancelButton" onClick={closeModal}>Cancel</button>
             </Form>
           )}
         </Formik>
     )
 }
-
-export default LoginForm;
