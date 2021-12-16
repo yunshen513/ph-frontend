@@ -48,10 +48,12 @@ export const LoginForm: React.FC<Props> = ({closeModal}) => {
         >
           {({ errors, touched }) => (
             <Form className="Form">
-              <Field className="Input" name="username" />
+              <label htmlFor="username">username</label>
+              <Field className="Input" name="username" data-testid="username"/>
               {errors.username && touched.username ? (<div className="ErrorMessage">{errors.username}</div>) : null}
               
-              <Field className="Input" name="password" />
+              <label htmlFor="password">password</label>
+              <Field className="Input" name="password" data-testid="password"/>
               {errors.password && touched.password ? (<div className="ErrorMessage">{errors.password}</div>) : null}
               
               <button className="SubmitButton" type="submit">Submit</button>
